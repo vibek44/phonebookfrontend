@@ -70,11 +70,12 @@ const addPerson=(event)=>{
                     setNewNumber('')
                     setTimeout(()=>{
                       setNotification({...notification,message:null})},5000)
-                   
-                  })
-              
-                 }}
-                else{setNotification({...notification,errormessage:'name or number is missing'})
+                    })
+                   }}
+                else{ setNotification({...notification,errormessage:'name or number is missing'})
+                      setTimeout(()=>{
+                      setNotification({...notification,message:null})},5000)
+                     
                          }}
 
  const deletePerson=(id,name)=>{
