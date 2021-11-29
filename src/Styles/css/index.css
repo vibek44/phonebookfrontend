@@ -16,7 +16,10 @@ body {
   margin-left: 2rem;
 }
 
-fieldset {
+.contactform-container {
+  width: 30%;
+}
+.contactform-container fieldset {
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
