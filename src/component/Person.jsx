@@ -1,8 +1,12 @@
+
 import React from 'react'
 
-const Person=({person,deletePerson})=> 
-<p>{person.name} {person.number} 
-<button onClick={deletePerson }>delete</button>
-</p>
+export const Person=({person,handleRemove})=> <tr>
+     <td>
+        {person.name} 
+     </td>
+     <td>
+        {person.number}  <button onClick={handleRemove }>delete</button>
+     </td>
+</tr>
 
-export default Person;
