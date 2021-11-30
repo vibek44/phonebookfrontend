@@ -1,11 +1,12 @@
 
    .contactform-container{
-    width: 30%;
-    fieldset{
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.5rem;
-    
-    }
+  width: 25%;
+  fieldset{
+      display: flex;
+      flex-flow: column wrap;
+      row-gap: 1em;
+      margin-left: 8em;
 
+  }
+    
 }
