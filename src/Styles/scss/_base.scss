@@ -1,6 +1,9 @@
+$font-family: helvetica sans-serif;
+
+$color:rgb(210, 210, 210);
+
+
 body{
-    font-family: sans-serif Verdana;
-    background-color: beige;
-    margin: 0;
-   
-    }
+    background-color: $color;
+    width:100%
+}
