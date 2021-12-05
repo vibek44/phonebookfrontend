@@ -1,0 +1,14 @@
+@use './base';
+
+td{
+    border-collapse: collapse;
+    border: 0.1em solid black;
+    padding:base.$xs-size;
+    .button{
+        @include base.button-theme;
+    }
+    
+}
+
+
+
