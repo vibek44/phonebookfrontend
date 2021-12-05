@@ -12,9 +12,9 @@ const Contactform=(props)=> <form  className="contactform-container" onSubmit={p
                                     value={props.valuenumber} 
                                     onChange={props.handleNumberChange} />
                                 </div>
-                                <div>
+                              
                                 <button type="submit"  >add</button>
-                                </div>
+                               
                               </fieldset>
                           </form>
 
