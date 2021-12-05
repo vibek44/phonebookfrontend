@@ -1,0 +1,11 @@
+@use './base';
+
+table,tr,th {
+     width: 30%;
+     border-collapse: collapse;
+     border:0.1em solid black;
+     margin-top: base.$m-size;
+     caption{
+         font-size:2em;
+        }
+    }
