@@ -1,6 +1,7 @@
 import {Person} from "./Person"
 
 export const Tableinfo=({filteredContact, handleRemove})=><table>
+                                   <caption>Contact list</caption>
                                    <tbody>
                                         <tr>
                                              <th> Name</th>
