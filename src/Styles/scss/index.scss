@@ -1,5 +1,5 @@
 
-@use './partial';
+@use './base';
 @use './app';
 @use './search.scss';
 @use './contactform.scss';
@@ -7,3 +7,7 @@
 @use './person.scss';
 @use './notification.scss';
 
+body{
+    background-color:rgba(base.$primary-color,0.5);
+    width:100%;
+   }
