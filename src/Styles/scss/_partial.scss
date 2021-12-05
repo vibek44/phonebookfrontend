@@ -1,0 +1,8 @@
+@use './base';
+
+body{
+
+    background-color:rgba(base.$primary-color,0.5);
+    width:100%;
+   
+}
