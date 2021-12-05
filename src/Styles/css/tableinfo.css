@@ -1,0 +1,9 @@
+table, tr, th {
+  width: 30%;
+  border-collapse: collapse;
+  border: 0.1em solid black;
+  margin-top: 2.5em;
+}
+table caption, tr caption, th caption {
+  font-size: 2em;
+}
