@@ -63,7 +63,7 @@ const App = () => {
            .create(newperson)
            .then(returnedPerson=>{
               setPersons(persons.concat(returnedPerson))
-              setNotification({...notification,message:`Added ${newperson.name}`})   
+              setNotification({...notification,message:`${newperson.name} added.`})   
               setNewName('') 
               setNewNumber('')
               setTimeout(()=>{
@@ -96,10 +96,9 @@ const App = () => {
        valuenumber={newNumber}
        handleNameChange={handleNameChange}
        handleNumberChange={handleNumberChange} />
-     <h2>Numbers</h2>
-     {(filteredContact.length>0) && <Tableinfo 
+     {(filteredContact.length>0) ? <Tableinfo 
        filteredContact={filteredContact}  
-       handleRemove={removePerson} />
+       handleRemove={removePerson} />:<p className="no_contact">No contacts found.</p>
       }
    </div>
   )
