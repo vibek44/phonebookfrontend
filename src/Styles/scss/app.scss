@@ -1,9 +1,13 @@
+@use './base';
+
 .main-container{
-    
-    display: flex;
-    flex-flow: column wrap ;
+    @include base.display-theme;
     align-items: center;
-    row-gap: 2em;
+    row-gap: base.$m-size;
+
+    .no_contact{
+        font-size: base.$m-size;
+    }
     
     
 }
