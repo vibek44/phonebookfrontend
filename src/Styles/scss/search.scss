@@ -1,4 +1,5 @@
+@use './base';
 .search-container{
-    margin-left: 2em;
-    align-self: flex-start;
+    margin-left:base.$m-size;
+    align-self: flex-start;    
 }
