@@ -1,9 +1,28 @@
-$font-family: helvetica sans-serif;
+//size variable
+$xss-size:0.3em;
+$xs-size:0.5em;
 
-$color:rgb(210, 210, 210);
+$s-size:1em;
 
+$m-size:2.5em;
 
-body{
-    background-color: $color;
-    width:100%
+$l-size:4.5em;
+
+//font style variable
+
+$font-family:$s-size  helvetica sans-serif;
+
+//color variable
+$primary-color:rgb(204, 221, 255);
+$secondry-color:rgb(115, 99, 71);
+
+//style for button
+@mixin button-theme{
+    border-radius:$xss-size;
+   
+}
+//style for display
+@mixin display-theme{
+    display: flex;
+    flex-flow: column wrap;
 }
