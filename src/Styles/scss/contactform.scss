@@ -1,12 +1,18 @@
+@use './base';
 
    .contactform-container{
-  width: 25%;
-  fieldset{
-      display: flex;
-      flex-flow: column wrap;
-      row-gap: 1em;
-      margin-left: 8em;
+       width: 20%;
 
-  }
-    
-}
+       fieldset{
+         @include base.display-theme;
+         row-gap: base.$s-size;
+         background-color: rgba(base.$secondry-color, 0.1);
+         padding:base.$s-size;
+         button{
+             @include base.button-theme;
+             width:40%;
+             margin-left:base.$l-size;
+            }
+         
+        }
+    }
