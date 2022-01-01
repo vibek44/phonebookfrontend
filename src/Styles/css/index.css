@@ -56,13 +56,7 @@ td .button {
   padding: 1em;
 }
 
-.error {
-  width: 25%;
-  border: 1px solid;
-  font-size: 0.5em;
-  background-color: rgba(253, 0, 24, 0.3);
-  padding-left: 1em;
-}
+
 
 body {
   background-color: rgba(204, 221, 255, 0.5);
