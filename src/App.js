@@ -63,7 +63,7 @@ const App = () => {
            .create(newperson)
            .then(returnedPerson=>{
               setPersons(persons.concat(returnedPerson))
-              setNotification({...notification,message:`${newperson.name} added.`})   
+              setNotification({...notification,message:`${returnedPerson.name} added.`})   
               setNewName('') 
               setNewNumber('')
               setTimeout(()=>{
