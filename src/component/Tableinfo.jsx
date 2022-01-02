@@ -6,6 +6,7 @@ export const Tableinfo=({filteredContact, handleRemove})=><table>
                                         <tr>
                                              <th> Name</th>
                                              <th>Phone no</th>
+                                             <th>Action</th>
                                         </tr>
                                         {filteredContact.map((person)=><Person
                                              key={person.id}
