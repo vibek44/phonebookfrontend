@@ -6,7 +6,10 @@ export const Person=({person,handleRemove})=> <tr>
         {person.name} 
      </td>
      <td>
-        {person.number}  <button onClick={handleRemove }>delete</button>
+        {person.number} 
+     </td>
+     <td>
+     <button onClick={handleRemove }>delete</button>
      </td>
 </tr>
 
