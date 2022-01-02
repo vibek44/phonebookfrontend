@@ -34,7 +34,7 @@ const App = () => {
  
  const addPerson=(event)=>{
    event.preventDefault()
-   if(newName&&newNumber) { 
+   if(newName&&newNumber) {  // section to edit existing user information
      let person=persons.find((el)=>el.name.toLowerCase()===newName.trim().toLowerCase());
      if(person) {
        alert(`${newName} is already added to phonebook,Replace old number with new`)
@@ -54,7 +54,7 @@ const App = () => {
        .catch((error)=>{
          setNotification({...notification,errormessage:`Information of ${newName} has been removed`}) 
         })
-      }else {
+      }else {   //section for adding new user
          const newperson={
             name:newName,
             number:newNumber
@@ -69,7 +69,7 @@ const App = () => {
               setTimeout(()=>{
               setNotification({...notification,message:null})},5000)
             })
-        }
+      }
     }else{ 
        setNotification({...notification,errormessage:'name or number is missing'})
         setTimeout(()=>{
