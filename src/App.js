@@ -33,32 +33,33 @@ const App = () => {
   },[]) 
  
  const addPerson=(event)=>{
-   event.preventDefault()
-   if(newName&&newNumber) {  // section to edit existing user information
-     let person=persons.find((el)=>el.name.toLowerCase()===newName.trim().toLowerCase());
-     if(person) {
-       alert(`${newName} is already added to phonebook,Replace old number with new`)
-       const changedperson={...person,number:newNumber}
-       personService
-       .update(person.id,changedperson)
-       .then(responsedata=>{
-         setPersons(persons.map((el)=>person.id!==el.id ? el:responsedata))
-         setNewName('')
-         setNewNumber('')
-         setNotification(
-           { ...notification,message:`changed number from ${person.number} to ${responsedata.number}` }
-          )
-         setTimeout(()=>{
-         setNotification({ ...notification,message:null})}, 5000) 
-          })
-       .catch((error)=>{
-         setNotification({...notification,errormessage:`Information of ${newName} has been removed`}) 
+  event.preventDefault()
+  if(newName&&newNumber) {  // section to edit existing user information
+    let person=persons.find((el)=>el.name.toLowerCase()===newName.trim().toLowerCase());
+    if(person) {
+      alert(`${newName} is already added to phonebook,Replace old number with new`)
+      const changedperson={...person,number:newNumber}
+      personService
+      .update(person.id,changedperson)
+      .then(responsedata=>{
+        setPersons(persons.map((el)=>person.id!==el.id ? el:responsedata))
+        setNewName('')
+        setNewNumber('')
+        setNotification(
+          { ...notification,message:`changed number from ${person.number} to ${responsedata.number}` }
+        )
+        setTimeout(()=>{
+        setNotification({ ...notification,message:null})}, 5000) 
         })
-      }else {   //section for adding new user
-         const newperson={
+      .catch(error=>{
+        setNotification({...notification,errormessage:error.response.data.error}) 
+        setTimeout(()=>{
+        setNotification({ ...notification,errormessage:null})}, 5000)
+      })}else {   //section for adding new user
+          const newperson={
             name:newName,
             number:newNumber
-          }
+        }
          personService
            .create(newperson)
            .then(returnedPerson=>{
@@ -68,7 +69,12 @@ const App = () => {
               setNewNumber('')
               setTimeout(()=>{
               setNotification({...notification,message:null})},5000)
-            })
+            }).catch(error=>{
+                setNotification({...notification,errormessage:error.response.data.error})
+                setTimeout(()=>{
+                  setNotification({ ...notification,errormessage:null})}, 5000)
+              })
+             
       }
     }else{ 
        setNotification({...notification,errormessage:'name or number is missing'})
